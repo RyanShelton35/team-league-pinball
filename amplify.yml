@@ -1,5 +1,5 @@
 version: 1
-applications:
+applnications:
   - appRoot: pinball-app
     backend:
       phases:
@@ -16,6 +16,7 @@ applications:
         baseDirectory: dist
         files:
           - '**/*'
+          - './src/amplify_outputs.json' # Include amplify_outputs.json
       cache:
         paths:
           - .npm/**/*
