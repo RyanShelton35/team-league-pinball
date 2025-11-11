@@ -12,6 +12,25 @@ const schema = a.schema({
       content: a.string(),
     })
     .authorization((allow) => [allow.guest()]),
+  Machine: a
+    .model({
+      key: a.string(),
+      name: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+  Venue: a
+    .model({
+      key: a.string(),
+      name: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+  Team: a
+    .model({
+      key: a.string(),
+      venueKey: a.string(),
+      name: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
