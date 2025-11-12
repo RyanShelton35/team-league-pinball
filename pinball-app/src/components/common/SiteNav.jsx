@@ -15,28 +15,37 @@ function SiteNav(props) {
 
 
     return (
-        <header>
-            <Container className="float-start">
+        <div className="nav-bar py-0">
+            <div className="btn-group">
                 <Dropdown>
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    Home
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                        <Dropdown.Item href="/">Home</Dropdown.Item>
-                        <Dropdown.Item href="/teams">Teams</Dropdown.Item>
-                        <Dropdown.Item href="/venues">
-                            Venues
-                        </Dropdown.Item>
-                        <Dropdown.Item href="/machines">Machines</Dropdown.Item>
-                        <Dropdown.Divider />
-                        <Dropdown.Item href="/register">Register</Dropdown.Item>
-                        <Dropdown.Item href="/login">Login</Dropdown.Item>
-                        <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
-                    </Dropdown.Menu>
+                <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                    <img src="/icon_128.png" width="38" height="38" /><span className="px-1 text-uppercase">HOME</span>
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                <Dropdown.Item href="/">HOME</Dropdown.Item>
+                <Dropdown.Item href="http://pinballstats.info/search/">PLAYER LOOKUP</Dropdown.Item>
+                <Dropdown.Item href="/teams">TEAMS</Dropdown.Item>
+                <Dropdown.Item href="/schedule">SCHEDULE</Dropdown.Item>
+                <Dropdown.Item href="/standings">STANDINGS</Dropdown.Item>
+                <Dropdown.Item href="/matches">MATCHES</Dropdown.Item>
+                <Dropdown.Item href="/stats">STATS</Dropdown.Item>
+                <Dropdown.Item href="/venues">VENUES</Dropdown.Item>
+                <Dropdown.Item href="/machines">MACHINES</Dropdown.Item>
+                <Dropdown.Item href="/ratings">RATINGS</Dropdown.Item>
+                <Dropdown.Item href="/leaguerules">LEAGUE RULES</Dropdown.Item>
+                <Dropdown.Item href="/matchrules">MATCH RULES</Dropdown.Item>
+                <Dropdown.Item href="http://tinyurl.com/mnparchive">ARCHIVES</Dropdown.Item>
+                <Dropdown.Item href="/scoresheet">SCORESHEET PDF</Dropdown.Item>      
+                <Dropdown.Item href="/ifparules">IFPA RULES</Dropdown.Item>
+                <Dropdown.Item href="/signup">ACCOUNT SIGN-UP</Dropdown.Item>
+                <Dropdown.Item href="/NEWPLAYERS">NEW PLAYER INFORMATION</Dropdown.Item>
+                <Dropdown.Item href="/CONDUCT">REPORT PLAYER CONDUCT</Dropdown.Item>
+                <Dropdown.Item href="/login">LOGIN</Dropdown.Item>
+                <Dropdown.Item href="/profile">PROFILE</Dropdown.Item>
+                </Dropdown.Menu>
                 </Dropdown>
-            </Container>
-        </header>
+            </div>
+        </div>
     );
 }
 

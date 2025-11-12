@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import './App.css'
+import './assets/base.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import SiteNav from './components/common/SiteNav'
@@ -11,6 +11,11 @@ import MachinesPage from './components/machines/MachinesPage';
 import TeamsPage from './components/teams/TeamsPage';
 import LoginPage from './components/auth/LoginPage';
 
+import { Amplify } from 'aws-amplify'
+import outputs from '../amplify_outputs.json'
+
+Amplify.configure(outputs);
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
 
@@ -18,21 +23,21 @@ function App() {
     setIsAuthenticated(authStatus)
   }
 
-  const router = createBrowserRouter([
-
-    {path: "/", element: <HomePage />},
-    {path: "/teams", element: <TeamsPage />},
-    {path: "/machines", element: <MachinesPage />},
-    {path: "/login", element: <LoginPage />},
-  ])
-
   return (
+    <BrowserRouter>
     <div>
       <SiteNav isAuthenticated={isAuthenticated} updateAuthStatus={updateAuthStatus} />
-
-      <RouterProvider router={router} />
+      <div id="content">
+        <Routes>
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/teams" element={<TeamsPage />} />
+          <Route path="/machines" element={<MachinesPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </div>
       <SiteFooter />
     </div>
+    </BrowserRouter>
   );
 }
 
