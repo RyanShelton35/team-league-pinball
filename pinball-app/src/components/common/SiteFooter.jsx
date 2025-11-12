@@ -1,12 +1,11 @@
-import Container from "react-bootstrap/esm/Container";
 
 function SiteFooter() {
     return (
-        <footer className="py-5 my-5">
-            <Container className="px-4">
-                <p className="text-end">&copy; 2025</p>
-            </Container>
-        </footer>
+        <div className="text-white">
+            <center>
+            &copy;2025 Team Pinball League Manager
+            </center>
+        </div>
     )
 }
 
