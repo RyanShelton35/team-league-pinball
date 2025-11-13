@@ -34,9 +34,9 @@ function SiteNav(props) {
                 <Dropdown.Item href="/ratings">RATINGS</Dropdown.Item>
                 <Dropdown.Item href="/rules2.html">LEAGUE RULES</Dropdown.Item>
                 <Dropdown.Item href="/matchrules.html">MATCH RULES</Dropdown.Item>
-                <Dropdown.Item href="http://tinyurl.com/mnparchive">ARCHIVES</Dropdown.Item>
-                <Dropdown.Item href="/scoresheet">SCORESHEET PDF</Dropdown.Item>      
-                <Dropdown.Item href="/ifparules">IFPA RULES</Dropdown.Item>
+                <Dropdown.Item href="https://www.ifpapinball.com/wp/wp-content/uploads/2025/08/PAPA_IFPA-Complete-Competition-Rules-2025.08.pdf">
+                    IFPA RULES
+                </Dropdown.Item>
                 <Dropdown.Item href="/signup">ACCOUNT SIGN-UP</Dropdown.Item>
                 <Dropdown.Item href="/NEWPLAYERS">NEW PLAYER INFORMATION</Dropdown.Item>
                 <Dropdown.Item href="/CONDUCT">REPORT PLAYER CONDUCT</Dropdown.Item>

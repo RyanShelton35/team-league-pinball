@@ -10,6 +10,7 @@ import SiteFooter from './components/common/SiteFooter'
 import HomePage from './components/home/HomePage'
 import MachinesPage from './components/machines/MachinesPage';
 import TeamsPage from './components/teams/TeamsPage';
+import VenuesPage from './components/venues/VenuesPage';
 import LoginPage from './components/auth/LoginPage';
 import LeagueRulesPage from './components/rules/LeagueRulesPage';
 import MatchRulesPage from './components/rules/MatchRulesPage';
@@ -33,6 +34,7 @@ function App() {
           <Route path="/" element={<HomePage/>} />
           <Route path="/teams" element={<TeamsPage />} />
           <Route path="/machines" element={<MachinesPage />} />
+          <Route path="/venues" element={<VenuesPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/leaguerules" element={<LeagueRulesPage />} />
           <Route path="/matchrules" element={<MatchRulesPage />} />
