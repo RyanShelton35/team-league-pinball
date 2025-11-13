@@ -1,4 +1,4 @@
-import { Container, Table } from 'react-bootstrap'
+import { Container, Table } from "react-bootstrap";
 
 import { generateClient } from 'aws-amplify/data';
 
@@ -12,27 +12,27 @@ Amplify.configure(outputs);
  */
 const client = generateClient();
 
-const { data: machines } = await client.models.Machine.list();
+const { data: venues } = await client.models.Venue.list();
 
+// Now you should be able to make CRUDL operations with the
+// Data client
 
-function MachinesPage() {
+function VenuesPage() {
 
-    const machineList = machines.map((machine) => 						
-                <tr key={machine.key}>
-                    <td>{machine.key}</td>
-                    <td>{machine.name}</td>
+    const venueList = venues.map((venue) => 						
+                <tr key={venue.key}>
+                    <td>{venue.name}</td>
                 </tr>
     );
-
     return (
         <Container fluid>
-            <Table className="table-striped"> 
+            <Table className="table"> 
                 <tbody>
-				    {machineList}
+                    {venueList}
                 </tbody>
-			</Table> 
+            </Table> 
         </Container>
     );
 }
 
-export default MachinesPage;
+export default VenuesPage;
