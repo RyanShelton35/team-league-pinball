@@ -32,8 +32,8 @@ function SiteNav(props) {
                 <Dropdown.Item href="/venues">VENUES</Dropdown.Item>
                 <Dropdown.Item href="/machines">MACHINES</Dropdown.Item>
                 <Dropdown.Item href="/ratings">RATINGS</Dropdown.Item>
-                <Dropdown.Item href="/leaguerules">LEAGUE RULES</Dropdown.Item>
-                <Dropdown.Item href="/matchrules">MATCH RULES</Dropdown.Item>
+                <Dropdown.Item href="/rules2.html">LEAGUE RULES</Dropdown.Item>
+                <Dropdown.Item href="/matchrules.html">MATCH RULES</Dropdown.Item>
                 <Dropdown.Item href="http://tinyurl.com/mnparchive">ARCHIVES</Dropdown.Item>
                 <Dropdown.Item href="/scoresheet">SCORESHEET PDF</Dropdown.Item>      
                 <Dropdown.Item href="/ifparules">IFPA RULES</Dropdown.Item>
