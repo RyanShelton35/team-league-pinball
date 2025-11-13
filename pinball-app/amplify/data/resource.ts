@@ -12,20 +12,20 @@ const schema = a.schema({
       key: a.string(),
       name: a.string(),
     })
-    .authorization((allow) => [allow.public()]),
+    .authorization((allow) => [allow.guest()]),
   Venue: a
     .model({
       key: a.string(),
       name: a.string(),
     })
-    .authorization((allow) => [allow.public()]),
+    .authorization((allow) => [allow.guest()]),
   Team: a
     .model({
       key: a.string(),
       venueKey: a.string(),
       name: a.string(),
     })
-    .authorization((allow) => [allow.public()]),
+    .authorization((allow) => [allow.guest()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
