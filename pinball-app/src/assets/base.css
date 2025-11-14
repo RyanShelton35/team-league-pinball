@@ -1,6 +1,6 @@
 div { padding: 7px; }
 body {
-  background-image: url(skyline.jpg);
+  background-image: url(/skyline.jpg);
   background-repeat: repeat-x;
   background-color: black;
   font-family: sans-serif;
