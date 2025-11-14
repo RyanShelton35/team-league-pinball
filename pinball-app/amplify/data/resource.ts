@@ -26,6 +26,16 @@ const schema = a.schema({
       name: a.string(),
     })
     .authorization((allow) => [allow.guest()]),
+  Match: a
+    .model({
+      week: a.integer(),
+      date: a.date(),
+      awayTeam: a.string(),
+      homeTeam: a.string(),
+      venueKey: a.string(),
+      name: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
